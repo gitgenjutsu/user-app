@@ -27,7 +27,6 @@ const UserDetails = () => {
         try {
           const response = await fetch(`https://api.github.com/users/${username}`);
           const data = await response.json();
-          console.log(data, data.status, '== data');
           if (data?.status === "404") {
             setUser(null);
           } else {
